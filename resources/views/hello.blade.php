@@ -36,7 +36,7 @@
 
                     <div class="ml-12">
                         <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                            Тут привет  ))
+                           {{$hello}}
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
 
                     <div class="ml-12">
                         <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                            И тут привет
+                            {{$description}}
                         </div>
                     </div>
                 </div>

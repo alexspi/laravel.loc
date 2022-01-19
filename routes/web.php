@@ -13,7 +13,5 @@ use App\Http\Controllers\IndexController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/hellow', [IndexController::class,'index'])->name('hellow');
+
+Route::get('/', [IndexController::class,'index'])->name('main');

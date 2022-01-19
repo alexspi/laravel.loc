@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 8.78.1.
+ * Generated for Laravel 8.80.0.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -2337,6 +2337,19 @@
                         return $instance->compileString($value);
         }
                     /**
+         * Evaluate and render a Blade string to HTML.
+         *
+         * @param string $string
+         * @param array $data
+         * @param bool $deleteCachedView
+         * @return string 
+         * @static 
+         */ 
+        public static function render($string, $data = [], $deleteCachedView = false)
+        {
+                        return \Illuminate\View\Compilers\BladeCompiler::render($string, $data, $deleteCachedView);
+        }
+                    /**
          * Strip the parentheses from the given expression.
          *
          * @param string $expression
@@ -4445,7 +4458,7 @@
      * @method static \Illuminate\Support\Carbon now($tz = null)
      * @method static \Illuminate\Support\Carbon parse($time = null, $tz = null)
      * @method static \Illuminate\Support\Carbon setHumanDiffOptions($humanDiffOptions)
-     * @method static \Illuminate\Support\Carbon setTestNow($testNow = null)
+     * @method static void setTestNow($testNow = null)
      * @method static \Illuminate\Support\Carbon setUtf8($utf8)
      * @method static \Illuminate\Support\Carbon today($tz = null)
      * @method static \Illuminate\Support\Carbon tomorrow($tz = null)
@@ -4573,6 +4586,22 @@
         {
                         /** @var \Illuminate\Database\DatabaseManager $instance */
                         return $instance->connection($name);
+        }
+                    /**
+         * Register a custom Doctrine type.
+         *
+         * @param string $class
+         * @param string $name
+         * @param string $type
+         * @return void 
+         * @throws \Doctrine\DBAL\DBALException
+         * @throws \RuntimeException
+         * @static 
+         */ 
+        public static function registerDoctrineType($class, $name, $type)
+        {
+                        /** @var \Illuminate\Database\DatabaseManager $instance */
+                        $instance->registerDoctrineType($class, $name, $type);
         }
                     /**
          * Disconnect from the given database and remove from local cache.
@@ -5130,22 +5159,6 @@
         {            //Method inherited from \Illuminate\Database\Connection         
                         /** @var \Illuminate\Database\MySqlConnection $instance */
                         return $instance->getDoctrineConnection();
-        }
-                    /**
-         * Register a custom Doctrine mapping type.
-         *
-         * @param string $class
-         * @param string $name
-         * @param string $type
-         * @return void 
-         * @throws \Doctrine\DBAL\DBALException
-         * @throws \RuntimeException
-         * @static 
-         */ 
-        public static function registerDoctrineType($class, $name, $type)
-        {            //Method inherited from \Illuminate\Database\Connection         
-                        /** @var \Illuminate\Database\MySqlConnection $instance */
-                        $instance->registerDoctrineType($class, $name, $type);
         }
                     /**
          * Get the current PDO connection.
@@ -7659,17 +7672,6 @@
                         return $instance->driver($driver);
         }
                     /**
-         * 
-         *
-         * @return array 
-         * @static 
-         */ 
-        public static function getChannels()
-        {
-                        /** @var \Illuminate\Log\LogManager $instance */
-                        return $instance->getChannels();
-        }
-                    /**
          * Get the default log driver name.
          *
          * @return string|null 
@@ -7716,6 +7718,17 @@
         {
                         /** @var \Illuminate\Log\LogManager $instance */
                         return $instance->forgetChannel($driver);
+        }
+                    /**
+         * Get all of the resolved log channels.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getChannels()
+        {
+                        /** @var \Illuminate\Log\LogManager $instance */
+                        return $instance->getChannels();
         }
                     /**
          * System is unusable.
@@ -19456,6 +19469,35 @@ namespace  {
             {
                                 /** @var \Illuminate\Database\Query\Builder $instance */
                                 return $instance->dynamicWhere($method, $parameters);
+            }
+             
+                /**
+             * Add a "where fulltext" clause to the query.
+             *
+             * @param string|string[] $columns
+             * @param string $value
+             * @param string $boolean
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function whereFullText($columns, $value, $options = [], $boolean = 'and')
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->whereFullText($columns, $value, $options, $boolean);
+            }
+             
+                /**
+             * Add a "or where fulltext" clause to the query.
+             *
+             * @param string|string[] $columns
+             * @param string $value
+             * @return \Illuminate\Database\Query\Builder 
+             * @static 
+             */ 
+            public static function orWhereFullText($columns, $value, $options = [])
+            {
+                                /** @var \Illuminate\Database\Query\Builder $instance */
+                                return $instance->orWhereFullText($columns, $value, $options);
             }
              
                 /**

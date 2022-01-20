@@ -15,3 +15,7 @@ use App\Http\Controllers\IndexController;
 
 
 Route::get('/', [IndexController::class,'index'])->name('main');
+
+Route::get('/category/{category}', [IndexController::class,'category'])->name('category');
+
+Route::get('/post/{title}', [IndexController::class,'single_post'])->name('post');

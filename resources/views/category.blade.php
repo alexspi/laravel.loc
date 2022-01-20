@@ -4,9 +4,15 @@
     @include('include.slider')
 
     <!-- layout-fixed -->
-    <div class="layout-fixed"> <!-- blog-regular -->
+    <div class="layout-fixed">
+        <article class="page type-page hentry">
+
+            <header class="entry-header">
+                <h1 class="entry-title">{{$category}}</h1>
+            </header>
+        </article>
         <div class="blog-regular">
-            @foreach($blog as $post)
+            @foreach($category_blog as $post)
                 <article class="hentry post">
 
                     <!-- .entry-header -->

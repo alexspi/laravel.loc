@@ -66,7 +66,7 @@
     <!-- site-title -->
     <h1 class="site-title">
         <a href="/" rel="home">
-            <img src="images/site/logo.png" alt="logo">
+            <img src="/images/site/logo.png" alt="logo">
             <!--EDITOR-->
         </a>
     </h1>

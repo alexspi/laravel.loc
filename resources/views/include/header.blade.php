@@ -1,77 +1,95 @@
-<header id="masthead" class="site-header" role="banner">
+<header class="header-top" header-theme="light">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-between">
+            <div class="top-menu d-flex align-items-center">
+                <button type="button" class="btn-icon mobile-nav-toggle d-lg-none"><span></span></button>
+                
+                <div class="header-search">
+                    <div class="input-group">
 
-    <!-- site-navigation -->
-    <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-
-        <a class="menu-toggle"><span class="lines"></span></a>
-
-        <!-- nav-menu -->
-        <div class="nav-menu">
-            <ul>
-                <li><a href="index.html">Home</a>
-                    <!-- level 2 -->
-                    <ul>
-                        <li><a href="home-alt.html">Home Alternate</a></li>
-                        <li><a href="blog-masonry.html">Blog Masonry</a></li>
-                        <li><a href="blog-simple.html">Blog Simple</a></li>
-                        <li><a href="blog-regular-with-sidebar.html">Blog Regular Sidebar</a></li>
-                        <li><a href="blog-masonry-with-sidebar.html">Blog Masonry Sidebar</a></li>
-                    </ul>
-                    <!-- level 2 -->
-                </li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="books.html">Books</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <!-- nav-menu -->
-
-        <a class="search-toggle toggle-link"></a>
-
-        <!-- search-container -->
-        <div class="search-container">
-
-            <div class="search-box">
-                <form role="search" method="get" class="search-form" action="#">
-                    <label>Search for
-                        <input type="search" id="search-field" placeholder="type and hit enter" name="s">
-                    </label>
-                    <input type="submit" class="search-submit" value="Search">
-                </form>
+                        <span class="input-group-addon search-close">
+                            <i class="ik ik-x"></i>
+                        </span>
+                        <input type="text" class="form-control">
+                        <span class="input-group-addon search-btn"><i class="ik ik-search"></i></span>
+                    </div>
+                </div>
+                <button class="nav-link" title="clear cache">
+                    <a  href="{{url('clear-cache')}}">
+                    <i class="ik ik-battery-charging"></i> 
+                </a>
+                </button> &nbsp;&nbsp;
+                <button type="button" id="navbar-fullscreen" class="nav-link"><i class="ik ik-maximize"></i></button>
             </div>
+            <div class="top-menu d-flex align-items-center">
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="notiDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-bell"></i><span class="badge bg-danger">3</span></a>
+                    <div class="dropdown-menu dropdown-menu-right notification-dropdown" aria-labelledby="notiDropdown">
+                        <h4 class="header">{{ __('Notifications')}}</h4>
+                        <div class="notifications-wrap">
+                            <a href="#" class="media">
+                                <span class="d-flex">
+                                    <i class="ik ik-check"></i> 
+                                </span>
+                                <span class="media-body">
+                                    <span class="heading-font-family media-heading">{{ __('Invitation accepted')}}</span> 
+                                    <span class="media-content">{{ __('Your have been Invited ...')}}</span>
+                                </span>
+                            </a>
+                            <a href="#" class="media">
+                                <span class="d-flex">
+                                    <img src="{{ asset('img/users/1.jpg')}}" class="rounded-circle" alt="">
+                                </span>
+                                <span class="media-body">
+                                    <span class="heading-font-family media-heading">{{ __('Steve Smith')}}</span> 
+                                    <span class="media-content">{{ __('I slowly updated projects')}}</span>
+                                </span>
+                            </a>
+                            <a href="#" class="media">
+                                <span class="d-flex">
+                                    <i class="ik ik-calendar"></i> 
+                                </span>
+                                <span class="media-body">
+                                    <span class="heading-font-family media-heading">{{ __('To Do')}}</span> 
+                                    <span class="media-content">{{ __('Meeting with Nathan on Friday 8 AM ...')}}</span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="footer"><a href="javascript:void(0);">{{ __('See all activity')}}</a></div>
+                    </div>
+                </div>
+                <button type="button" class="nav-link ml-10 right-sidebar-toggle"><i class="ik ik-message-square"></i><span class="badge bg-success">3</span></button>
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ik ik-plus"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right menu-grid" aria-labelledby="menuDropdown">
+                        <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Dashboard"><i class="ik ik-bar-chart-2"></i></a>
+                        <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Message"><i class="ik ik-mail"></i></a>
+                        <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Accounts"><i class="ik ik-users"></i></a>
+                        <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Sales"><i class="ik ik-shopping-cart"></i></a>
+                        <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Purchase"><i class="ik ik-briefcase"></i></a>
+                        <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Pages"><i class="ik ik-clipboard"></i></a>
+                        <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Chats"><i class="ik ik-message-square"></i></a>
+                        <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Contacts"><i class="ik ik-map-pin"></i></a>
+                        <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Blocks"><i class="ik ik-inbox"></i></a>
+                        <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Events"><i class="ik ik-calendar"></i></a>
+                        <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="Notifications"><i class="ik ik-bell"></i></a>
+                        <a class="dropdown-item" href="#" data-toggle="tooltip" data-placement="top" title="More"><i class="ik ik-more-horizontal"></i></a>
+                    </div>
+                </div>
+                <button type="button" class="nav-link ml-10" id="apps_modal_btn" data-toggle="modal" data-target="#appsModal"><i class="ik ik-grid"></i></button>
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="avatar" src="{{ asset('img/user.jpg')}}" alt=""></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="{{url('profile')}}"><i class="ik ik-user dropdown-icon"></i> {{ __('Profile')}}</a>
+                        <a class="dropdown-item" href="#"><i class="ik ik-navigation dropdown-icon"></i> {{ __('Message')}}</a>
+                        <a class="dropdown-item" href="{{ url('logout') }}">
+                            <i class="ik ik-power dropdown-icon"></i> 
+                            {{ __('Logout')}}
+                        </a>
+                    </div>
+                </div>
 
+            </div>
         </div>
-        <!-- search-container -->
-
-        <!-- social-container -->
-        <div class="social-container">
-
-            <ul class="social">
-                <li><a class="facebook" href="#"></a></li>
-                <li><a class="twitter" href="#"></a></li>
-                <li><a class="vine" href="#"></a></li>
-                <li><a class="dribbble" href="#"></a></li>
-                <li><a class="instagram" href="#"></a></li>
-            </ul>
-
-
-        </div>
-        <!-- social-container -->
-
-    </nav>
-    <!-- site-navigation -->
-
-    <!-- site-title -->
-    <h1 class="site-title">
-        <a href="/" rel="home">
-            <img src="/images/site/logo.png" alt="logo">
-            <!--EDITOR-->
-        </a>
-    </h1>
-    <!-- site-title -->
-
-
-
+    </div>
 </header>

@@ -4,34 +4,23 @@
 <meta name="keywords" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="shortcut icon" href="{{ asset('images/ico/favicon.ico')}}">
-<link rel="apple-touch-icon" href="{{ asset('images/ico/apple-touch-icon.png')}}"/>
+<link rel="icon" href="{{ asset('favicon.png')}}" />
 
-<title>Editor - a wordpress blog</title>
+<!-- font awesome library -->
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
 
-<!-- FONTS -->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic,400italic' rel='stylesheet' type='text/css'>
+<script src="{{ asset('js/app.js') }}"></script>
 
-<!-- STYLES -->
-<link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/fonts/fontello/css/fontello.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('js/jquery.uniform/uniform.default.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('js/jquery.magnific-popup/magnific-popup.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('js/jquery.fluidbox/fluidbox.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('js/owl-carousel/owl.carousel.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('js/selection-sharer/selection-sharer.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('js/responsive-image-gallery/elastislide.css')}}" />
-<link rel="stylesheet" type="text/css" href="{{ asset('css/align.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/768.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('css/992.css')}}">
+<!-- themekit admin template asstes -->
+<link rel="stylesheet" href="{{ asset('all.css') }}">
+<link rel="stylesheet" href="{{ asset('dist/css/theme.css') }}">
+<link rel="stylesheet" href="{{ asset('plugins/fontawesome-free/css/all.min.css') }}">
+<link rel="stylesheet" href="{{ asset('plugins/icon-kit/dist/css/iconkit.min.css') }}">
+<link rel="stylesheet" href="{{ asset('plugins/ionicons/dist/css/ionicons.min.css') }}">
 
 
 <!-- Stack array for including inline css or head elements -->
 @stack('head')
 
-<script src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>
-<script src="{{ asset('js/jquery-migrate-1.2.1.min.js') }}"></script>
-<script src="{{ asset('js/modernizr.min.js') }}"></script>
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 

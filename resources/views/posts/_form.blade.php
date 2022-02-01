@@ -36,14 +36,14 @@
 
 @php
     if(isset($post)) {
-        $tag = $post->tags->pluck('name')->all();
+        $tag = $post->tags->pluck('name','id')->all();
     } else {
         $tag = null;
     }
 @endphp
-
+{{--{{dd($tags)}}--}}
 <div class="form-group{{ $errors->has('tags') ? ' has-error' : '' }}">
-    {!! Form::label('tags', 'Теги', ['class' => 'col-md-2 control-label']) !!}
+    {!! Form::label('tags', 'Tag', ['class' => 'col-md-2 control-label']) !!}
 
     <div class="col-md-8">
         {!! Form::select('tags[]', $tags, $tag, ['class' => 'form-control select2-tags', 'required', 'multiple']) !!}

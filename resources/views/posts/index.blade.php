@@ -31,7 +31,7 @@
 
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-body">
+                    <div class="panel-body table responsive">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -64,9 +64,9 @@
                                                 @endphp
                                                 <a href="{{ route('post.publish',['post'=>$post])}}" data-method="PUT" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-warning">{{ $label }}</a>
                                             @endcan
-                                            <a href="{{ route('post.show',['id'=>$post->id]) }}" class="btn btn-xs btn-success">Show</a>
-{{--                                            <a href="{{ route('post.edit',['id'=>$post->id])}}" class="btn btn-xs btn-info">Edit</a>--}}
-                                            <a href="{{ route('post.delete',['id'=>$post->id])}}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-danger">Delete</a>
+                                            <a href="{{ route('post.show',['post'=>$post]) }}" class="btn btn-xs btn-success">Show</a>
+                                            <a href="{{ route('post.edit',['post'=>$post])}}" class="btn btn-xs btn-info">Edit</a>
+                                            <a href="{{ route('post.delete',['post'=>$post])}}" data-method="DELETE" data-token="{{ csrf_token() }}" data-confirm="Are you sure?" class="btn btn-xs btn-danger">Delete</a>
                                         </td>
                                     </tr>
                                 @empty

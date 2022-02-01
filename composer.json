@@ -28,6 +28,8 @@
         "barryvdh/laravel-ide-helper": "^2.12",
         "facade/ignition": "^2.3.6",
         "fakerphp/faker": "^1.9.1",
+        "laravel-lang/lang": "^10.4",
+        "laravel-lang/publisher": "^12.2",
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.3.1",
         "nunomaduro/collision": "^5.0",

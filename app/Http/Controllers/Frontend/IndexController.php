@@ -10,32 +10,29 @@ use App\Models\Post;
 
 class IndexController extends Controller
 {
-   
+
 
     public function index()
     {
         $blog = Post::paginate(5);
 
-        return view('Frontend.index',compact('blog',) );
+        return view('Frontend.index', compact('blog',));
     }
 
     public function category($slug)
     {
-       $category = Category::whereSlug($slug)->first();
+        $category = Category::whereSlug($slug)->first();
 
-        $blog = Post::where('category_id',$category->id)->paginate(5);
+        $blog = Post::where('category_id', $category->id)->paginate(5);
 
-        return view('Frontend.category', compact('blog','category'));
+        return view('Frontend.category', compact('blog', 'category'));
     }
 
     public function single_post($slug)
     {
-        $post= Post::whereSlug($slug)->first();
+        $post = Post::whereSlug($slug)->first();
 
-
-            return view('Frontend.single_post', compact('post'));
-
-
+        return view('Frontend.single_post', compact('post'));
 
     }
 }

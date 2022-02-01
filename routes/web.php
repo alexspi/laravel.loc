@@ -84,17 +84,14 @@ Route::group(['middleware' => 'auth'], function(){
 
     Route::group(['prefix' => 'blog','middleware' => 'can:manage_blog'], function(){
         Route::get('/posts', [PostController::class,'index'])->name('blog');
-        Route::put('/post/{id}', [PostController::class,'show'])->name('post.show');
+        Route::put('/post/{post}', [PostController::class,'show'])->name('post.show');
         Route::put('/post/{post}/publish', [PostController::class,'publish'])->name('post.publish');
         Route::get('/post/create', [PostController::class,'create'])->name('post.create');
+        Route::get('/post/{post}/edit', [PostController::class,'edit'])->name('post.edit');
         Route::post('/post/create', [PostController::class,'store'])->name('post.create');
-        Route::get('/post/update', [PostController::class,'index'])->name('post.update');
-        Route::get('/post/delete/{id}', [PostController::class,'index'])->name('post.delete');
+        Route::post('/post/update', [PostController::class,'update'])->name('post.update');
+        Route::get('/post/delete/{post}', [PostController::class,'destroy'])->name('post.delete');
 
-//        Route::get('/permission/get-list', [PermissionController::class,'getPermissionList']);
-//        Route::post('/permission/create', [PermissionController::class,'create']);
-//        Route::get('/permission/update', [PermissionController::class,'update']);
-//        Route::get('/permission/delete/{id}', [PermissionController::class,'delete']);
     });
 
 	

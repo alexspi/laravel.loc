@@ -75,8 +75,10 @@ class PermissionController extends Controller
      * Associate permissions will be stored in table
      */
 
-    public function create(PermissionRequest $request)
+    public function create(Request $request)
     {
+
+//        dd($request->all());
         try {
             $permission = Permission::create(['name' => $request->permission]);
             $permission->syncRoles($request->roles);

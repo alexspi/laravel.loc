@@ -43,19 +43,15 @@
 
                 <!-- end inventory pages -->
 
-                <div class="nav-lavel">{{ __('Themekit Pages')}} </div>
-                <div class="nav-item {{ ($segment1 == 'form-components' || $segment1 == 'form-advance'||$segment1 == 'form-addon') ? 'active open' : '' }} has-sub">
-                    <a href="#"><i class="ik ik-edit"></i><span>{{ __('Forms')}}</span></a>
+                <div class="nav-lavel">{{ __('Блог')}} </div>
+                <div class="nav-item {{ ($segment1 == 'posts' || $segment1 == 'category'||$segment1 == 'form-addon') ? 'active open' : '' }} has-sub">
+                    <a href="#"><i class="ik ik-edit"></i><span>{{ __('Статьи')}}</span></a>
                     <div class="submenu-content">
-                        <a href="{{url('form-components')}}" class="menu-item {{ ($segment1 == 'form-components') ? 'active' : '' }}">{{ __('Components')}}</a>
+                        <a href="{{route('blog')}}" class="menu-item {{ ($segment1 == 'posts') ? 'active' : '' }}">{{ __('Статьи')}}</a>
                         <a href="{{url('form-addon')}}" class="menu-item {{ ($segment1 == 'form-addon') ? 'active' : '' }}">{{ __('Add-On')}}</a>
                         <a href="{{url('form-advance')}}" class="menu-item {{ ($segment1 == 'form-advance') ? 'active' : '' }}">{{ __('Advance')}}</a>
                     </div>
                 </div>
-                <div class="nav-item {{ ($segment1 == 'form-picker') ? 'active' : '' }}">
-                    <a href="{{url('form-picker')}}"><i class="ik ik-terminal"></i><span>{{ __('Form Picker')}}</span> </a>
-                </div>
-
 
                 <div class="nav-item">
                     <a href="javascript:void(0)" class="disabled"><i class="ik ik-slash"></i><span>{{ __('Disabled Menu')}}</span></a>
